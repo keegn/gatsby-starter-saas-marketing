@@ -19,7 +19,7 @@ const Header = () => {
   `)
 
   return (
-    <HeaderWrapper id="top">
+    <HeaderWrapper id="about">
       <Container>
         <Grid>
           <HeaderTextGroup>

@@ -16,7 +16,7 @@ import {
 
 // import { MenuIcon } from "../../../static/icons/menu.svg"
 
-const NAV_ITEMS = ["About", "Brands", "Team", "FAQ"]
+const NAV_ITEMS = ["About", "Features", "Pricing"]
 
 export default class Navigation extends Component {
   state = {

@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 import { Container } from "../global"
 
 const Footer = () => (
-  <FooterWrapper>
+  <FooterWrapper id="footer">
     <StyledContainer>
       <Copyright>
         <h2>Logo</h2>
