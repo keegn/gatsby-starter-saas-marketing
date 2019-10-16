@@ -21,9 +21,9 @@ const theme = {
     black: {
       lighter: "#ABA8AF",
       light: "#564F62",
-      regular: "#211E26",
+      regular: "#132063",
     },
-    primary: "palevioletred",
+    primary: "#132063",
   },
   screen: {
     xs: "575px",

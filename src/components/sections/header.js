@@ -133,7 +133,7 @@ const HeaderInput = styled.input`
 `
 
 const HeaderButton = styled.button`
-  background-color: black;
+  background-color: ${props => props.theme.color.primary};
   color: rgb(255, 255, 255);
   display: inline-block;
   font-size: 18px;
