@@ -2,8 +2,8 @@
 
 const theme = {
   font: {
-    primary: `'poppins'`,
-    secondary: `'poppins'`,
+    primary: `'HK Grotesk'`,
+    secondary: `'HK GrotesK Medium'`,
   },
   font_size: {
     small: "font-size: 20px; line-height: 30px",
