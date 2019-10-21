@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
 
 import { Container } from "../global"
 
@@ -14,26 +13,30 @@ const Footer = () => (
     </BrandContainer>
     <FooterLinksContainer>
       <FooterColumn>
+        <span>Features</span>
         <ul>
-          <span>Features</span>
+          <li>Something here</li>
           <li>Something here</li>
         </ul>
       </FooterColumn>
       <FooterColumn>
+        <span>Features</span>
         <ul>
-          <span>Features</span>
+          <li>Something here</li>
           <li>Something here</li>
         </ul>
       </FooterColumn>
       <FooterColumn>
+        <span>Features</span>
         <ul>
-          <span>Features</span>
+          <li>Something here</li>
           <li>Something here</li>
         </ul>
       </FooterColumn>
       <FooterColumn>
+        <span>Features</span>
         <ul>
-          <span>Features</span>
+          <li>Something here</li>
           <li>Something here</li>
         </ul>
       </FooterColumn>
@@ -89,18 +92,18 @@ const FooterLinksContainer = styled(Container)`
   justify-content: start;
 `
 const FooterColumn = styled.div`
+  span {
+    font-size: 16px;
+    font-family: "HK Grotesk Bold";
+    color: white;
+  }
   ul {
     list-style: none;
-    margin: 0;
+    margin: 16px 0;
     padding: 0;
     color: ${props => props.theme.color.white.regular};
-    span {
-      font-size: 16px;
-      margin-bottom: 10px;
-      font-family: "HK Grotesk Bold";
-    }
     li {
-      margin-top: 10px;
+      margin-bottom: 12px;
       font-family: "HK Grotesk Light";
     }
   }
