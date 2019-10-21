@@ -11,7 +11,7 @@ const Footer = () => (
       </Copyright>
       <SocialIcons></SocialIcons>
     </BrandContainer>
-    <FooterLinksContainer>
+    <FooterColumnContainer>
       <FooterColumn>
         <span>Features</span>
         <ul>
@@ -40,7 +40,7 @@ const Footer = () => (
           <li>Something here</li>
         </ul>
       </FooterColumn>
-    </FooterLinksContainer>
+    </FooterColumnContainer>
   </FooterWrapper>
 )
 
@@ -85,7 +85,7 @@ const BrandContainer = styled(Container)`
     text-align: center;
   }
 `
-const FooterLinksContainer = styled(Container)`
+const FooterColumnContainer = styled(Container)`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 32px;
