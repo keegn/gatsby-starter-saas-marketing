@@ -6,15 +6,38 @@ import { Container } from "../global"
 
 const Footer = () => (
   <FooterWrapper id="footer">
-    <StyledContainer>
+    <BrandContainer>
       <Copyright>
         <h2>Logo</h2>
-        <span>
-          <Link href="https://github.com/keegnn">@keegnn</Link>
-        </span>
       </Copyright>
       <SocialIcons></SocialIcons>
-    </StyledContainer>
+    </BrandContainer>
+    <FooterLinksContainer>
+      <FooterColumn>
+        <ul>
+          <span>Features</span>
+          <li>Something here</li>
+        </ul>
+      </FooterColumn>
+      <FooterColumn>
+        <ul>
+          <span>Features</span>
+          <li>Something here</li>
+        </ul>
+      </FooterColumn>
+      <FooterColumn>
+        <ul>
+          <span>Features</span>
+          <li>Something here</li>
+        </ul>
+      </FooterColumn>
+      <FooterColumn>
+        <ul>
+          <span>Features</span>
+          <li>Something here</li>
+        </ul>
+      </FooterColumn>
+    </FooterLinksContainer>
   </FooterWrapper>
 )
 
@@ -34,7 +57,7 @@ const SocialIcons = styled.div`
 
 const FooterWrapper = styled.footer`
   background-color: ${props => props.theme.color.primary};
-  padding: 32px 0;
+  padding: 64px 0 96px;
 `
 
 const Copyright = styled.div`
@@ -48,14 +71,38 @@ const Copyright = styled.div`
   }
 `
 
-const StyledContainer = styled(Container)`
+const BrandContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 32px;
 
   @media (max-width: ${props => props.theme.screen.sm}) {
     flex-direction: column;
     text-align: center;
+  }
+`
+const FooterLinksContainer = styled(Container)`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 32px;
+  justify-content: start;
+`
+const FooterColumn = styled.div`
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: ${props => props.theme.color.white.regular};
+    span {
+      font-size: 16px;
+      margin-bottom: 10px;
+      font-family: "HK Grotesk Bold";
+    }
+    li {
+      margin-top: 10px;
+      font-family: "HK Grotesk Light";
+    }
   }
 `
 

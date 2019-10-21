@@ -2,7 +2,7 @@
 
 const theme = {
   font: {
-    primary: `'HK Grotesk'`,
+    primary: `'HK Grotesk Bold'`,
     secondary: `'HK GrotesK Medium'`,
   },
   font_size: {
