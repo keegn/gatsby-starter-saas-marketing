@@ -7,6 +7,7 @@ import Navigation from "../components/common/navigation/navigation"
 import Header from "../components/sections/header"
 import Features from "../components/sections/features"
 import Footer from "../components/sections/footer"
+import GetStarted from "../components/sections/getstarted"
 
 // Notes for fonts -
 // step 1. add WOFF fonts to static/fonts
@@ -29,6 +30,7 @@ const IndexPage = () => (
     <Navigation />
     <Header />
     <Features />
+    <GetStarted />
     <Footer />
   </Layout>
 )
