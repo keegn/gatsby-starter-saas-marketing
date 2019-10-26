@@ -3,17 +3,22 @@ import styled from "styled-components"
 import { Container } from "../../global"
 
 export const Nav = styled.nav`
-  padding: ${props => (props.scrolled ? `12px 0` : `32px 0`)};
+  padding: ${props => (props.scrolled ? `16px 0` : `24px 0`)};
   /* background-color: ${props => props.theme.color.primary}; */
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
   background: ${props => (props.scrolled ? `white` : null)};
-  box-shadow: ${props =>
-    props.scrolled ? `rgba(72, 76, 87, 0.1) 0px 1px 3px` : null};
+  /* box-shadow: ${props =>
+    props.scrolled ? `rgba(72, 76, 87, 0.1) 0px 1px 3px` : null}; */
   transition: 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-`
+  /* background-color: ${props => props.scrolled && `rgba(245, 245, 250, 0.9)`};
+    box-shadow:  ${props =>
+      props.scrolled &&
+      `0 0 0 1px rgba(0,0,50,.02) inset, 0 1px 1px rgba(0,0,50,.05) inset, 0 2px 4px rgba(0,0,50,.04) inset`};
+      backdrop-filter: ${props => props.scrolled && `blur(15px)`}; */
+      `
 
 export const StyledContainer = styled(Container)`
   display: flex;
@@ -45,13 +50,12 @@ export const NavListWrapper = styled.div`
 
 export const NavItem = styled.li`
   margin: 0 0.75em;
-  font-family: ${props => props.theme.font.secondary};
-  ${props => props.theme.font_size.small};
-  font-size: 16px;
+  font-family: ${props => props.theme.font.medium};
+  ${props => props.theme.font_size.xsmall};
 
   a {
     text-decoration: none;
-    opacity: 0.7;
+    opacity: 0.9;
     color: ${props => props.theme.color.black.regular};
   }
 
@@ -70,11 +74,11 @@ export const MobileMenu = styled.div`
 `
 
 export const Brand = styled.div`
-  font-family: ${props => props.theme.font.primary};
+  font-family: ${props => props.theme.font.extrabold};
   ${props => props.theme.font_size.large};
   color: ${props => props.theme.color.black.regular};
-  font-weight: 600;
   text-decoration: none;
+  letter-spacing: 1px;
   margin: 0;
   ul {
     list-style: none;
@@ -85,6 +89,21 @@ export const Brand = styled.div`
       color: ${props => props.theme.color.black.regular};
       text-decoration: none;
     }
+  }
+`
+export const ActionsContainer = styled.div`
+  display: flex;
+  align-items: center;
+
+  button {
+    font-family: ${props => props.theme.font.normal};
+    ${props => props.theme.font_size.xsmall};
+    color: white;
+    background: #098b8c;
+    border-radius: 4px;
+    padding: 10px 16px;
+    text-transform: uppercase;
+    font-size: 12px;
   }
 `
 

@@ -12,11 +12,12 @@ import {
   NavListWrapper,
   MobileMenu,
   Mobile,
+  ActionsContainer,
 } from "./style"
 
 // import { MenuIcon } from "../../../static/icons/menu.svg"
 
-const NAV_ITEMS = ["About", "Features", "Pricing"]
+const NAV_ITEMS = ["Features", "Products", "Pricing", ""]
 
 export default class Navigation extends Component {
   state = {
@@ -78,7 +79,7 @@ export default class Navigation extends Component {
           <Brand>
             <Scrollspy offset={-64} item={["top"]} currentClassName="active">
               <AnchorLink href="#top" onClick={this.closeMobileMenu}>
-                Lyso
+                Finance
               </AnchorLink>
             </Scrollspy>
           </Brand>
@@ -89,10 +90,9 @@ export default class Navigation extends Component {
           </Mobile>
 
           <Mobile hide>{this.getNavList({})}</Mobile>
-          <div style={{ display: "flex", alignItems: "center" }}>
-            <button>Get started</button>
-            <ChevronRight size={18} />
-          </div>
+          <ActionsContainer>
+            <button>Sign up</button>
+          </ActionsContainer>
         </StyledContainer>
         <Mobile>
           {mobileMenuOpen && (

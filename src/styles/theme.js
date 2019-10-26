@@ -2,26 +2,37 @@
 
 const theme = {
   font: {
-    primary: `'HK Grotesk'`,
-    secondary: `'HK GrotesK Medium'`,
+    primary: `'HK Grotesk Normal'`,
+    secondary: `'HK Grotesk Medium'`,
+    light: `'HK Grotesk Light'`,
+    normal: `'HK Grotesk Normal'`,
+    medium: `'HK Grotesk Medium'`,
+    semibold: `'HK Grotesk Semibold'`,
+    bold: `'HK Grotesk Bold'`,
+    extrabold: `'HK Grotesk Extra Bold'`,
   },
   font_size: {
-    small: "font-size: 20px; line-height: 30px",
-    regular: "font-size: 24px; line-height: 32px",
-    large: "font-size: 30px; line-height: 40px",
-    larger: "font-size: 36px; line-height: 48px",
-    xlarge: "font-size: 48px; line-height: 56px",
+    xxxsmall: "font-size: 12px;",
+    xxsmall: "font-size: 14px;",
+    xsmall: "font-size: 16px;",
+    small: "font-size: 17px;",
+    regular: "font-size: 22px; line-height: 30px",
+    large: "font-size: 28px; line-height: 30px",
+    larger: "font-size: 40px; line-height: 50px",
+    xlarge: "font-size: 48px; line-height: 48px",
   },
+
   color: {
     white: {
       regular: "#FFFFFF",
+      lessdark: "#FAF9F8",
       dark: "#F6F6F6",
       darker: "#EEEEEE",
     },
     black: {
       lighter: "#ABA8AF",
       light: "#564F62",
-      regular: "#132063",
+      regular: "rgb(7, 20, 53)",
     },
     primary: "#132063",
   },

@@ -1,142 +1,106 @@
 import React from "react"
 import styled from "styled-components"
-import { StaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 
 import { Section, Container } from "../global"
 
 const Features = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        art_fast: file(
-          sourceInstanceName: { eq: "product" }
-          name: { eq: "hero_test" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 760) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
-
-        art_learn: file(
-          sourceInstanceName: { eq: "product" }
-          name: { eq: "hero_test" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 760) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
-
-        art_ideas: file(
-          sourceInstanceName: { eq: "product" }
-          name: { eq: "hero_test" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 760) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
-      }
-    `}
-    render={data => (
-      <Section id="features">
-        <Container>
-          <Grid>
-            <div>
-              <h2>Speed past the competition</h2>
-              <p>
-                Gatsby.js builds the fastest possible website. Instead of
-                waiting to generate pages when requested, pre-build pages and
-                lift them into a global cloud of servers — ready to be delivered
-                instantly to your users wherever they are.
-              </p>
-            </div>
-            <Art>
-              <Img fluid={data.art_fast.childImageSharp.fluid} />
-            </Art>
-          </Grid>
-          <Grid inverse>
-            <Art>
-              <Img fluid={data.art_learn.childImageSharp.fluid} />
-            </Art>
-            <div>
-              <h2>Nothing new to learn here</h2>
-              <p>
-                Enjoy the power of the latest web technologies – React.js ,
-                Webpack , modern JavaScript and CSS and more — all set up and
-                waiting for you to start building.
-              </p>
-            </div>
-          </Grid>
-          <Grid>
-            <div>
-              <h2>Grow and build your ideas</h2>
-              <p>
-                Waste no more time on tooling and performance. Focus on the the
-                site you want to build and nothing more.
-                <br />
-                <br />
-                Gatsby is fast in every way that matters.
-              </p>
-            </div>
-            <Art>
-              <Img fluid={data.art_ideas.childImageSharp.fluid} />
-            </Art>
-          </Grid>
-        </Container>
-      </Section>
-    )}
-  />
+  <Section id="features">
+    <StyledContainer>
+      <Subtitle>Automation</Subtitle>
+      <SectionTitle>Smart money management</SectionTitle>
+      <FeaturesGrid>
+        <FeatureItem>
+          <FeatureTitle>Notifications</FeatureTitle>
+          <FeatureText>
+            Receive budget and spending alerts based on your custom triggers.
+          </FeatureText>
+        </FeatureItem>
+        <FeatureItem>
+          <FeatureTitle>Security</FeatureTitle>
+          <FeatureText>
+            Your data is always safe with us as we use the lastest encryption
+            techniques.
+          </FeatureText>
+        </FeatureItem>
+        <FeatureItem>
+          <FeatureTitle>Automation</FeatureTitle>
+          <FeatureText>
+            Create smart automatation workflows and triggers for your money.
+          </FeatureText>
+        </FeatureItem>
+        <FeatureItem>
+          <FeatureTitle>Aggregation</FeatureTitle>
+          <FeatureText>
+            Easily link up to 5 banks to your finace account.
+          </FeatureText>
+        </FeatureItem>
+        <FeatureItem>
+          <FeatureTitle>Payments</FeatureTitle>
+          <FeatureText>Send money to friends and family with ease.</FeatureText>
+        </FeatureItem>
+        <FeatureItem>
+          <FeatureTitle>Rewards</FeatureTitle>
+          <FeatureText>
+            High interest and gift card rewards for just for saving money.
+          </FeatureText>
+        </FeatureItem>
+      </FeaturesGrid>
+    </StyledContainer>
+  </Section>
 )
 
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  grid-gap: 40px;
-  text-align: right;
-  align-items: center;
-  justify-items: center;
-  margin: 24px 0;
-
-  ${props =>
-    props.inverse &&
-    `
-    text-align: left;
-    grid-template-columns: 2fr 3fr;
-  `}
-
-  h2 {
-    margin-bottom: 16px;
-  }
-
-  @media (max-width: ${props => props.theme.screen.md}) {
-    grid-template-columns: 1fr;
-    text-align: left;
-    margin-bottom: 96px;
-
-    &:last-child {
-      margin-bottom: 24px;
-    }
-
-    ${props =>
-      props.inverse &&
-      `
-        ${Art} {
-          order: 2;
-        }
-    `}
-  }
-`
-
-const Art = styled.figure`
-  margin: 0;
-  max-width: 380px;
-  width: 100%;
-`
-
 export default Features
+
+const StyledContainer = styled(Container)`
+  /* transform: skewY(5deg);
+  border-radius: 4px;
+  background-image: linear-gradient(to top, #fefefe 0%, #fbfbfb 100%); */
+`
+
+const SectionTitle = styled.h3`
+  color: black;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 40px;
+`
+
+const Subtitle = styled.h5`
+  font-family: "HK Grotesk Normal";
+  font-weight: 200;
+  font-size: 16px;
+  color: #cca86e;
+  letter-spacing: 0px;
+  margin-bottom: 12px;
+  text-align: center;
+`
+
+const FeaturesGrid = styled.div`
+  max-width: 670px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0px auto;
+  grid-column-gap: 40px;
+  grid-row-gap: 35px;
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    grid-template-columns: 1fr;
+    padding: 0 64px;
+  }
+`
+
+const FeatureItem = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`
+
+const FeatureTitle = styled.h4`
+  color: rgb(7, 20, 53);
+  letter-spacing: 0px;
+  line-height: 30px;
+  margin-bottom: 10px;
+`
+
+const FeatureText = styled.p`
+  text-align: center;
+`
