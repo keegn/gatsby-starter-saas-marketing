@@ -65,7 +65,7 @@ const FooterWrapper = styled.footer`
 
 const Logo = styled.div`
   font-family: ${props => props.theme.font.extrabold};
-  ${props => props.theme.font_size.large};
+  ${props => props.theme.font_size.regular};
   color: ${props => props.theme.color.black.regular};
   text-decoration: none;
   letter-spacing: 1px;
