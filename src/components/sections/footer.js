@@ -5,12 +5,6 @@ import { Container } from "../global"
 
 const Footer = () => (
   <FooterWrapper id="footer">
-    <BrandContainer>
-      <Copyright>
-        <h2>Logo</h2>
-      </Copyright>
-      <SocialIcons></SocialIcons>
-    </BrandContainer>
     <FooterColumnContainer>
       <FooterColumn>
         <span>Features</span>
@@ -41,48 +35,56 @@ const Footer = () => (
         </ul>
       </FooterColumn>
     </FooterColumnContainer>
+    <BrandContainer>
+      <Logo>logo</Logo>
+      {/* <Copyright>Copyright © 2019 Gatsbee, Inc. All rights reserved.</Copyright> */}
+    </BrandContainer>
   </FooterWrapper>
 )
 
-const SocialIcons = styled.div`
-  display: flex;
+// const SocialIcons = styled.div`
+//   display: flex;
 
-  img {
-    margin: 0 8px;
-    width: 24px;
-    height: 24px;
-  }
+//   img {
+//     margin: 0 8px;
+//     width: 24px;
+//     height: 24px;
+//   }
 
-  @media (max-width: ${props => props.theme.screen.sm}) {
-    margin-top: 40px;
-  }
-`
+//   @media (max-width: ${props => props.theme.screen.sm}) {
+//     margin-top: 40px;
+//   }
+// `
 
 const FooterWrapper = styled.footer`
   background-color: ${props => props.theme.color.primary};
+  margin: 80px 0 0 0;
   padding: 64px 0 96px;
 `
 
-const Copyright = styled.div`
-  font-family: ${props => props.theme.font.secondary};
-  ${props => props.theme.font_size.small};
+const Logo = styled.div`
+  font-family: ${props => props.theme.font.extrabold};
+  ${props => props.theme.font_size.large};
   color: ${props => props.theme.color.white.regular};
-
-  a {
-    text-decoration: none;
-    color: ${props => props.theme.color.black.lighter};
-  }
+  text-decoration: none;
+  letter-spacing: 1px;
+  margin: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 9;
+  text-decoration: none;
+  outline: 0px;
 `
 
 const BrandContainer = styled(Container)`
+  position: relative;
+  padding-top: 48px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 32px;
+  align-items: flex-end;
 
   @media (max-width: ${props => props.theme.screen.sm}) {
-    flex-direction: column;
-    text-align: center;
   }
 `
 const FooterColumnContainer = styled(Container)`

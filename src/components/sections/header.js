@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 
 import { Container } from "../global"
@@ -10,7 +10,7 @@ const Header = () => {
     query {
       file(sourceInstanceName: { eq: "product" }, name: { eq: "couch" }) {
         childImageSharp {
-          fluid(maxWidth: 1600) {
+          fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -21,30 +21,32 @@ const Header = () => {
   return (
     <HeaderWrapper id="about">
       <Container>
-        <Grid>
+        <Flex>
           <HeaderTextGroup>
-            <h1>future of renting</h1>
-            <p>
+            <Subtitle>Collaborate</Subtitle>
+            <h1>
+              Hire your team, with
+              <br />
+              your team
+            </h1>
+            <h2>
               We're building next generation property management tools. Sign up
               to get early accesss.
-            </p>
+            </h2>
             <HeaderForm>
               <HeaderInput placeholder="Your email" />
               <HeaderButton>Sign up</HeaderButton>
             </HeaderForm>
+            <FormSubtitle>
+              Already have an account?{" "}
+              <FormSubtitleLink to="/">Sign in</FormSubtitleLink>
+            </FormSubtitle>
           </HeaderTextGroup>
           <Text>
-            <Img
-              style={{
-                width: "600px",
-                maxWidth: "100%",
-                marginBottom: -16,
-              }}
-              fluid={data.file.childImageSharp.fluid}
-            />
+            <StyledImage fluid={data.file.childImageSharp.fluid} />
             <br />
           </Text>
-        </Grid>
+        </Flex>
       </Container>
     </HeaderWrapper>
   )
@@ -55,13 +57,22 @@ export default Header
 const HeaderWrapper = styled.header`
   /* background-color: ${props => props.theme.color.primary}; */
   background-color: white;
-  padding-top: 192px; /* Nav is 96px in height
+  padding:160px 0 80px 0;
+ /* Nav is 96px in height
       so this gives us 96px of padding up to the bottom of the nav
    */
 
   @media (max-width: ${props => props.theme.screen.md}) {
-    padding-top: 128px;
+
   }
+`
+const Subtitle = styled.h5`
+  font-family: "HK Grotesk Normal";
+  font-weight: 200;
+  font-size: 16px;
+  color: rgb(255, 77, 86);
+  letter-spacing: 0px;
+  margin-bottom: 24px;
 `
 
 const HeaderTextGroup = styled.div`
@@ -77,7 +88,12 @@ const HeaderTextGroup = styled.div`
   }
 
   h1 {
-    margin-bottom: 40px;
+    margin-bottom: 24px;
+  }
+
+  h2 {
+    margin-bottom: 24px;
+    ${props => props.theme.font_size.regular}
   }
 
   p {
@@ -85,89 +101,110 @@ const HeaderTextGroup = styled.div`
   }
 `
 
-const Grid = styled.div`
+const Flex = styled.div`
   display: grid;
+  justify-content: space-between;
+  align-content: center;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
-  grid-gap: 64px;
-  min-height: 400px;
-
   @media (max-width: ${props => props.theme.screen.md}) {
     grid-template-columns: 1fr;
-    grid-gap: 80px;
+    grid-gap: 64px;
   }
 `
 
 const HeaderForm = styled.form`
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  padding-bottom: 16px;
+
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    flex-direction: column;
+  }
+`
+
+const FormSubtitle = styled.span`
+  ${props => props.theme.font_size.xxsmall}
+`
+
+const FormSubtitleLink = styled(Link)`
+  color: #3d64ff;
+  padding-bottom: 2px;
+  margin-left: 8px;
+  text-decoration: none;
+  border-bottom: 1px solid rgb(61, 100, 255);
 `
 
 const HeaderInput = styled.input`
-  box-shadow: rgb(222, 226, 239) 0px 0px 0px 1px inset;
-  background-color: rgb(255, 255, 255);
-  color: black;
-  font-size: 18px;
   font-weight: 500;
-  max-width: 264px;
+  font-size: 16px;
+  color: rgb(7, 20, 53);
+  line-height: 42px;
+  width: 100%;
+  text-align: left;
   height: 60px;
-  line-height: normal;
-  padding-left: 24px;
-  padding-right: 24px;
-  margin-right: 16px;
-  -webkit-appearance: none;
-  box-sizing: border-box;
-  outline-color: transparent;
-  outline-offset: 4px;
-  outline-style: none;
-  outline-width: 1px;
-  transition-duration: 150ms;
-  transition-property: all;
-  transition-timing-function: ease-in-out;
-  border-radius: 8px;
-  border-width: 0px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(61, 100, 255);
+  border-image: initial;
+  border-radius: 4px;
+  padding: 8px 16px;
+  outline: 0px;
   &:focus {
     box-shadow: rgb(0, 0, 0) 0px 0px 0px 2px inset,
       rgba(46, 82, 180, 0.18) 0px 0px 0px 4px;
   }
+  @media (max-width: ${props => props.theme.screen.md}) {
+    margin-bottom: 8px;
+  }
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    display: block;
+    width: 100%;
+  }
 `
 
 const HeaderButton = styled.button`
-  background-color: ${props => props.theme.color.primary};
-  color: rgb(255, 255, 255);
-  display: inline-block;
-  font-size: 18px;
   font-weight: 500;
-  max-width: 264px;
+  font-size: 14px;
+  color: white;
+  letter-spacing: 1.5px;
   height: 60px;
-  line-height: 1;
-  padding-left: 48px;
-  padding-right: 48px;
-  -webkit-appearance: none;
-  box-sizing: border-box;
+  display: block;
+  margin-left: 8px;
+  text-transform: uppercase;
   cursor: pointer;
-  outline-style: none;
-  text-align: center;
-  transition-duration: 200ms;
-  user-select: none;
   white-space: nowrap;
-  border-radius: 8px;
-  border-width: initial;
-  border-style: none;
+  background: rgb(61, 100, 255);
+  border-radius: 4px;
+  padding: 0px 40px;
+  border-width: 0px;
+  border-style: initial;
   border-color: initial;
   border-image: initial;
-  text-decoration: none;
+  outline: 0px;
   &:hover {
     box-shadow: rgba(110, 120, 152, 0.22) 0px 2px 10px 0px;
-    color: rgb(255, 255, 255);
-    transform: translateY(-3px);
+  }
+  @media (max-width: ${props => props.theme.screen.md}) {
+  }
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    margin-left: 0;
   }
 `
 const Text = styled.div`
-  justify-self: center;
-
+  justify-self: end;
+  align-self: center;
   @media (max-width: ${props => props.theme.screen.md}) {
-    justify-self: start;
+    justify-self: center;
+  }
+`
+
+const StyledImage = styled(Img)`
+  width: 400px;
+  @media (max-width: ${props => props.theme.screen.md}) {
+    width: 600px;
+  }
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    width: 364px;
   }
 `
 

@@ -31,7 +31,7 @@ export const Container = styled.div`
 
 // needs more thought about the props.accent
 export const Section = styled.section`
-  padding: 128px 0;
+  padding: 80px 0;
   overflow: hidden;
   background-color: ${props => {
     switch (props.accent) {

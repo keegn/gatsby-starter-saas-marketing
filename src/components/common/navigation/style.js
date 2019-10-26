@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Container } from "../../global"
 
 export const Nav = styled.nav`
-  padding: ${props => (props.scrolled ? `12px 0` : `32px 0`)};
+  padding: ${props => (props.scrolled ? `16px 0` : `24px 0`)};
   /* background-color: ${props => props.theme.color.primary}; */
   position: fixed;
   width: 100%;
@@ -45,13 +45,12 @@ export const NavListWrapper = styled.div`
 
 export const NavItem = styled.li`
   margin: 0 0.75em;
-  font-family: ${props => props.theme.font.secondary};
-  ${props => props.theme.font_size.small};
-  font-size: 16px;
+  font-family: ${props => props.theme.font.medium};
+  ${props => props.theme.font_size.xsmall};
 
   a {
     text-decoration: none;
-    opacity: 0.7;
+    opacity: 0.9;
     color: ${props => props.theme.color.black.regular};
   }
 
@@ -70,11 +69,11 @@ export const MobileMenu = styled.div`
 `
 
 export const Brand = styled.div`
-  font-family: ${props => props.theme.font.primary};
+  font-family: ${props => props.theme.font.extrabold};
   ${props => props.theme.font_size.large};
   color: ${props => props.theme.color.black.regular};
-  font-weight: 600;
   text-decoration: none;
+  letter-spacing: 1px;
   margin: 0;
   ul {
     list-style: none;
@@ -85,6 +84,16 @@ export const Brand = styled.div`
       color: ${props => props.theme.color.black.regular};
       text-decoration: none;
     }
+  }
+`
+export const ActionsContainer = styled.div`
+  display: flex;
+  align-items: center;
+
+  button {
+    font-family: ${props => props.theme.font.medium};
+    ${props => props.theme.font_size.xsmall};
+    color: rgb(61, 100, 255);
   }
 `
 
