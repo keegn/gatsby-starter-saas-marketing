@@ -17,6 +17,7 @@ export default GetStarted
 
 const StyledSection = styled(Section)`
   background-color: #f8f8f8;
+  clip-path: polygon(0 0, 100% 14%, 100% 100%, 0% 100%);
 `
 
 const GetStartedContainer = styled(Container)`
@@ -24,6 +25,7 @@ const GetStartedContainer = styled(Container)`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 80px 0 40px;
 `
 
 const GetStartedTitle = styled.h3`

@@ -4,21 +4,13 @@ import { Container } from "../../global"
 
 export const Nav = styled.nav`
   padding: ${props => (props.scrolled ? `16px 0` : `24px 0`)};
-  /* background-color: ${props => props.theme.color.primary}; */
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
   background: ${props => (props.scrolled ? `white` : null)};
-  /* box-shadow: ${props =>
-    props.scrolled ? `rgba(72, 76, 87, 0.1) 0px 1px 3px` : null}; */
   transition: 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-  /* background-color: ${props => props.scrolled && `rgba(245, 245, 250, 0.9)`};
-    box-shadow:  ${props =>
-      props.scrolled &&
-      `0 0 0 1px rgba(0,0,50,.02) inset, 0 1px 1px rgba(0,0,50,.05) inset, 0 2px 4px rgba(0,0,50,.04) inset`};
-      backdrop-filter: ${props => props.scrolled && `blur(15px)`}; */
-      `
+`
 
 export const StyledContainer = styled(Container)`
   display: flex;
@@ -75,7 +67,7 @@ export const MobileMenu = styled.div`
 
 export const Brand = styled.div`
   font-family: ${props => props.theme.font.extrabold};
-  ${props => props.theme.font_size.large};
+  ${props => props.theme.font_size.regular};
   color: ${props => props.theme.color.black.regular};
   text-decoration: none;
   letter-spacing: 1px;
@@ -124,3 +116,10 @@ export const Mobile = styled.div`
     }
   `}
 `
+
+// Background blur info
+// background-color: ${props => props.scrolled && `rgba(245, 245, 250, .8`};
+// box-shadow:  ${props =>
+//   props.scrolled &&
+//   `0 0 0 1px rgba(0,0,50,.02) inset, 0 1px 1px rgba(0,0,50,.05) inset, 0 2px 4px rgba(0,0,50,.04) inset`};
+//   backdrop-filter: ${props => props.scrolled && `blur(15px)`};
