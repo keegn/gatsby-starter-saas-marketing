@@ -1,6 +1,6 @@
 ## gatsby-starter-saas-marketing
 
-### 💽 A simple one page Gatsby starter for SaaS companies and products. 
+### 💽 a simple one page Gatsby starter for SaaS companies and products. 
 
 [Live Demo: https://gatsby-starter-saas-marketing.netlify.com/ ](https://gatsby-starter-saas-marketing.netlify.com/)
 
@@ -27,4 +27,4 @@ At the project root, serve the production build of your site:
 
 ### Styles
 
-This starter uses [styled-components](). The theme file containes the base styles `src/styles/theme.js` and the global styles file contains basic element styles and a style reset `src/styles/GlobalStyles.js`.
+This starter uses [styled-components](https://www.styled-components.com/). The theme file containes the base styles `src/styles/theme.js` and the global styles file contains basic element styles and a style reset `src/styles/GlobalStyles.js`.
