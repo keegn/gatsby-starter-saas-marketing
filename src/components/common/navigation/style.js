@@ -10,10 +10,15 @@ export const Nav = styled.nav`
   top: 0;
   z-index: 1000;
   background: ${props => (props.scrolled ? `white` : null)};
-  box-shadow: ${props =>
-    props.scrolled ? `rgba(72, 76, 87, 0.1) 0px 1px 3px` : null};
+  /* box-shadow: ${props =>
+    props.scrolled ? `rgba(72, 76, 87, 0.1) 0px 1px 3px` : null}; */
   transition: 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-`
+  /* background-color: ${props => props.scrolled && `rgba(245, 245, 250, 0.9)`};
+    box-shadow:  ${props =>
+      props.scrolled &&
+      `0 0 0 1px rgba(0,0,50,.02) inset, 0 1px 1px rgba(0,0,50,.05) inset, 0 2px 4px rgba(0,0,50,.04) inset`};
+      backdrop-filter: ${props => props.scrolled && `blur(15px)`}; */
+      `
 
 export const StyledContainer = styled(Container)`
   display: flex;
@@ -91,9 +96,14 @@ export const ActionsContainer = styled.div`
   align-items: center;
 
   button {
-    font-family: ${props => props.theme.font.medium};
+    font-family: ${props => props.theme.font.normal};
     ${props => props.theme.font_size.xsmall};
-    color: rgb(61, 100, 255);
+    color: white;
+    background: #098b8c;
+    border-radius: 4px;
+    padding: 10px 16px;
+    text-transform: uppercase;
+    font-size: 12px;
   }
 `
 

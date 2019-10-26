@@ -5,63 +5,73 @@ import { Section, Container } from "../global"
 
 const Features = () => (
   <Section id="features">
-    <Container>
-      <SectionTitle>Get your whole team involved</SectionTitle>
+    <StyledContainer>
+      <Subtitle>Automation</Subtitle>
+      <SectionTitle>Smart money management</SectionTitle>
       <FeaturesGrid>
         <FeatureItem>
           <FeatureTitle>Notifications</FeatureTitle>
           <FeatureText>
-            Easily follow jobs to opt-in to notifications on applications and
-            updates.
+            Receive budget and spending alerts based on your custom triggers.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Notifications</FeatureTitle>
+          <FeatureTitle>Security</FeatureTitle>
           <FeatureText>
-            Easily follow jobs to opt-in to notifications on applications and
-            updates.
+            Your data is always safe with us as we use the lastest encryption
+            techniques.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Notifications</FeatureTitle>
+          <FeatureTitle>Automation</FeatureTitle>
           <FeatureText>
-            Easily follow jobs to opt-in to notifications on applications and
-            updates.
+            Create smart automatation workflows and triggers for your money.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Notifications</FeatureTitle>
+          <FeatureTitle>Aggregation</FeatureTitle>
           <FeatureText>
-            Easily follow jobs to opt-in to notifications on applications and
-            updates.
+            Easily link up to 5 banks to your finace account.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Notifications</FeatureTitle>
-          <FeatureText>
-            Easily follow jobs to opt-in to notifications on applications and
-            updates.
-          </FeatureText>
+          <FeatureTitle>Payments</FeatureTitle>
+          <FeatureText>Send money to friends and family with ease.</FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Notifications</FeatureTitle>
+          <FeatureTitle>Rewards</FeatureTitle>
           <FeatureText>
-            Easily follow jobs to opt-in to notifications on applications and
-            updates.
+            High interest and gift card rewards for just for saving money.
           </FeatureText>
         </FeatureItem>
       </FeaturesGrid>
-    </Container>
+    </StyledContainer>
   </Section>
 )
 
 export default Features
+
+const StyledContainer = styled(Container)`
+  /* transform: skewY(5deg);
+  border-radius: 4px;
+  background-image: linear-gradient(to top, #fefefe 0%, #fbfbfb 100%); */
+`
 
 const SectionTitle = styled.h3`
   color: black;
   display: flex;
   justify-content: center;
   margin: 0 auto 40px;
+`
+
+const Subtitle = styled.h5`
+  font-family: "HK Grotesk Normal";
+  font-weight: 200;
+  font-size: 16px;
+  color: #cca86e;
+  letter-spacing: 0px;
+  margin-bottom: 12px;
+  text-align: center;
 `
 
 const FeaturesGrid = styled.div`
@@ -71,6 +81,10 @@ const FeaturesGrid = styled.div`
   margin: 0px auto;
   grid-column-gap: 40px;
   grid-row-gap: 35px;
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    grid-template-columns: 1fr;
+    padding: 0 64px;
+  }
 `
 
 const FeatureItem = styled.div`

@@ -25,6 +25,7 @@ const theme = {
   color: {
     white: {
       regular: "#FFFFFF",
+      lessdark: "#FAF9F8",
       dark: "#F6F6F6",
       darker: "#EEEEEE",
     },

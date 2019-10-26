@@ -8,10 +8,10 @@ import { Container } from "../global"
 const Header = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(sourceInstanceName: { eq: "product" }, name: { eq: "couch" }) {
+      file(sourceInstanceName: { eq: "product" }, name: { eq: "green-skew" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
@@ -23,22 +23,22 @@ const Header = () => {
       <Container>
         <Flex>
           <HeaderTextGroup>
-            <Subtitle>Collaborate</Subtitle>
+            <Subtitle>Personal Finance</Subtitle>
             <h1>
-              Hire your team, with
+              All your money,
               <br />
-              your team
+              one account
             </h1>
             <h2>
-              We're building next generation property management tools. Sign up
-              to get early accesss.
+              We're building next generation personal finance tools. Sign up to
+              get early accesss.
             </h2>
             <HeaderForm>
               <HeaderInput placeholder="Your email" />
-              <HeaderButton>Sign up</HeaderButton>
+              <HeaderButton>Early access</HeaderButton>
             </HeaderForm>
             <FormSubtitle>
-              Already have an account?{" "}
+              Already have a beta account?{" "}
               <FormSubtitleLink to="/">Sign in</FormSubtitleLink>
             </FormSubtitle>
           </HeaderTextGroup>
@@ -55,24 +55,18 @@ const Header = () => {
 export default Header
 
 const HeaderWrapper = styled.header`
-  /* background-color: ${props => props.theme.color.primary}; */
-  background-color: white;
-  padding:160px 0 80px 0;
- /* Nav is 96px in height
-      so this gives us 96px of padding up to the bottom of the nav
-   */
-
+  background-color: #f8f8f8;
+  padding: 160px 0 80px 0;
   @media (max-width: ${props => props.theme.screen.md}) {
-
   }
 `
 const Subtitle = styled.h5`
   font-family: "HK Grotesk Normal";
   font-weight: 200;
   font-size: 16px;
-  color: rgb(255, 77, 86);
+  color: #cca86e;
   letter-spacing: 0px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 `
 
 const HeaderTextGroup = styled.div`
@@ -88,7 +82,7 @@ const HeaderTextGroup = styled.div`
   }
 
   h1 {
-    margin-bottom: 24px;
+    margin: 0 0 24px;
   }
 
   h2 {
@@ -127,11 +121,11 @@ const FormSubtitle = styled.span`
 `
 
 const FormSubtitleLink = styled(Link)`
-  color: #3d64ff;
-  padding-bottom: 2px;
+  color: #098c8c;
+  padding-bottom: 1px;
   margin-left: 8px;
   text-decoration: none;
-  border-bottom: 1px solid rgb(61, 100, 255);
+  border-bottom: 1px solid #098c8c;
 `
 
 const HeaderInput = styled.input`
@@ -144,14 +138,13 @@ const HeaderInput = styled.input`
   height: 60px;
   border-width: 1px;
   border-style: solid;
-  border-color: rgb(61, 100, 255);
+  border-color: #098c8c;
   border-image: initial;
   border-radius: 4px;
   padding: 8px 16px;
   outline: 0px;
   &:focus {
-    box-shadow: rgb(0, 0, 0) 0px 0px 0px 2px inset,
-      rgba(46, 82, 180, 0.18) 0px 0px 0px 4px;
+    box-shadow: #098b8c 0px 0px 0px 2px;
   }
   @media (max-width: ${props => props.theme.screen.md}) {
     margin-bottom: 8px;
@@ -173,7 +166,7 @@ const HeaderButton = styled.button`
   text-transform: uppercase;
   cursor: pointer;
   white-space: nowrap;
-  background: rgb(61, 100, 255);
+  background: #098c8c;
   border-radius: 4px;
   padding: 0px 40px;
   border-width: 0px;
@@ -199,20 +192,11 @@ const Text = styled.div`
 `
 
 const StyledImage = styled(Img)`
-  width: 400px;
+  width: 500px;
   @media (max-width: ${props => props.theme.screen.md}) {
-    width: 600px;
+    width: 400px;
   }
   @media (max-width: ${props => props.theme.screen.sm}) {
     width: 364px;
   }
 `
-
-// const StyledExternalLink = styled(ExternalLink)`
-//   color: inherit;
-//   text-decoration: none;
-
-//   &:hover {
-//     color: ${props => props.theme.color.black.regular};
-//   }
-// `;

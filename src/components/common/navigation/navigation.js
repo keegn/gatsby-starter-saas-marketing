@@ -17,7 +17,7 @@ import {
 
 // import { MenuIcon } from "../../../static/icons/menu.svg"
 
-const NAV_ITEMS = ["About", "Features", "Pricing"]
+const NAV_ITEMS = ["Features", "Products", "Pricing", ""]
 
 export default class Navigation extends Component {
   state = {
@@ -79,7 +79,7 @@ export default class Navigation extends Component {
           <Brand>
             <Scrollspy offset={-64} item={["top"]} currentClassName="active">
               <AnchorLink href="#top" onClick={this.closeMobileMenu}>
-                logo
+                Finance
               </AnchorLink>
             </Scrollspy>
           </Brand>
@@ -91,12 +91,7 @@ export default class Navigation extends Component {
 
           <Mobile hide>{this.getNavList({})}</Mobile>
           <ActionsContainer>
-            <button>Get started</button>
-            <ChevronRight
-              size={16}
-              color="rgb(61, 100, 255)
-            "
-            />
+            <button>Sign up</button>
           </ActionsContainer>
         </StyledContainer>
         <Mobile>

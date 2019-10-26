@@ -45,7 +45,7 @@ export const Section = styled.section`
   }};
 
   @media (max-width: ${props => props.theme.screen.md}) {
-    padding: 96px 0;
+    padding: 80px 0;
   }
 
   ${props =>

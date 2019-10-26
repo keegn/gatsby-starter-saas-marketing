@@ -4,16 +4,20 @@ import styled from "styled-components"
 import { Container, Section } from "../global"
 
 const GetStarted = () => (
-  <Section>
+  <StyledSection>
     <GetStartedContainer>
-      <GetStartedTitle>Get started with Lyso today</GetStartedTitle>
-      <TryItButton>Try it free</TryItButton>
-      <Subtitle>No credit card required</Subtitle>
+      <GetStartedTitle>Be the first to get the beta</GetStartedTitle>
+      <TryItButton>Get early access</TryItButton>
+      <Subtitle>No credit card required.</Subtitle>
     </GetStartedContainer>
-  </Section>
+  </StyledSection>
 )
 
 export default GetStarted
+
+const StyledSection = styled(Section)`
+  background-color: #f8f8f8;
+`
 
 const GetStartedContainer = styled(Container)`
   display: flex;
@@ -24,33 +28,46 @@ const GetStartedContainer = styled(Container)`
 
 const GetStartedTitle = styled.h3`
   font-size: 42px;
-  margin-bottom: 32px;
+  margin: 0 auto 32px;
+  /* color: ${props => props.theme.color.white.lessdark}; */
 `
 
 const TryItButton = styled.button`
-  height: 60px;
-  display: inline-flex;
-  -webkit-box-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  align-items: center;
-  margin-bottom: 38px;
-  font-family: "HK Grotesk Semibold";
   font-weight: 500;
-  font-size: 26px;
+  font-size: 14px;
   color: white;
-  letter-spacing: 0px;
-  background: rgb(255, 77, 86);
+  letter-spacing: 1.5px;
+  height: 60px;
+  display: block;
+  margin-left: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+  background: #098c8c;
   border-radius: 4px;
-  padding: 0px 64px;
-  text-decoration: none;
-  margin-bottom: 32px;
+  padding: 0px 40px;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  outline: 0px;
+  &:hover {
+    box-shadow: rgba(110, 120, 152, 0.22) 0px 2px 10px 0px;
+  }
+  @media (max-width: ${props => props.theme.screen.md}) {
+  }
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    margin-left: 0;
+  }
+  /* color: ${props => props.theme.color.white.lessdark}; */
 `
 
 const Subtitle = styled.span`
-  font-family: "HK Grotesk Medium";
+  font-family: "HK Grotesk Normal";
   font-weight: 300;
-  font-size: 16px;
+  padding-top: 16px;
+  font-size: 14px;
   color: rgb(7, 20, 53);
   letter-spacing: 0px;
+  /* color: ${props => props.theme.color.white.lessdark}; */
 `

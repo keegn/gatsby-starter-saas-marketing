@@ -9,26 +9,27 @@ const Footer = () => (
       <FooterColumn>
         <span>Features</span>
         <ul>
-          <li>Something here</li>
-          <li>Something here</li>
+          <li>Automation</li>
+          <li>Investing</li>
+          <li>Payments</li>
         </ul>
       </FooterColumn>
       <FooterColumn>
-        <span>Features</span>
+        <span>Resources</span>
         <ul>
-          <li>Something here</li>
-          <li>Something here</li>
+          <li>Compare</li>
+          <li>Blog</li>
         </ul>
       </FooterColumn>
       <FooterColumn>
-        <span>Features</span>
+        <span>Company</span>
         <ul>
-          <li>Something here</li>
-          <li>Something here</li>
+          <li>About Us</li>
+          <li>Careers</li>
         </ul>
       </FooterColumn>
       <FooterColumn>
-        <span>Features</span>
+        <span>Social</span>
         <ul>
           <li>Something here</li>
           <li>Something here</li>
@@ -36,7 +37,7 @@ const Footer = () => (
       </FooterColumn>
     </FooterColumnContainer>
     <BrandContainer>
-      <Logo>logo</Logo>
+      <Logo>Finance</Logo>
       {/* <Copyright>Copyright © 2019 Gatsbee, Inc. All rights reserved.</Copyright> */}
     </BrandContainer>
   </FooterWrapper>
@@ -57,15 +58,15 @@ const Footer = () => (
 // `
 
 const FooterWrapper = styled.footer`
-  background-color: ${props => props.theme.color.primary};
-  margin: 80px 0 0 0;
-  padding: 64px 0 96px;
+  background-color: white;
+  margin: 80px 0 0;
+  padding: 0 0 80px;
 `
 
 const Logo = styled.div`
   font-family: ${props => props.theme.font.extrabold};
   ${props => props.theme.font_size.large};
-  color: ${props => props.theme.color.white.regular};
+  color: ${props => props.theme.color.black.regular};
   text-decoration: none;
   letter-spacing: 1px;
   margin: 0;
@@ -92,21 +93,26 @@ const FooterColumnContainer = styled(Container)`
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 32px;
   justify-content: start;
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 32px;
+  }
 `
 const FooterColumn = styled.div`
   span {
     font-size: 16px;
     font-family: "HK Grotesk Bold";
-    color: white;
+    color: ${props => props.theme.color.black.regular};
   }
   ul {
     list-style: none;
     margin: 16px 0;
     padding: 0;
-    color: ${props => props.theme.color.white.regular};
+    color: ${props => props.theme.color.black.regular};
     li {
       margin-bottom: 12px;
-      font-family: "HK Grotesk Light";
+      font-family: "HK Grotesk Normal";
+      font-size: 15px;
     }
   }
 `
