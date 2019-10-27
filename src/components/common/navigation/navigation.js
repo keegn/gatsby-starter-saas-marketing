@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import Scrollspy from "react-scrollspy"
-import { ChevronRight } from "react-feather"
+// import { ChevronRight } from "react-feather"
 
 import { Container } from "../../global"
 import {

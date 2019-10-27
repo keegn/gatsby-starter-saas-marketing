@@ -16,7 +16,7 @@ const GetStarted = () => (
 export default GetStarted
 
 const StyledSection = styled(Section)`
-  background-color: #f8f8f8;
+  background-color: ${props => props.theme.color.background.light};
   clip-path: polygon(0 0, 100% 14%, 100% 100%, 0% 100%);
 `
 
@@ -29,9 +29,7 @@ const GetStartedContainer = styled(Container)`
 `
 
 const GetStartedTitle = styled.h3`
-  font-size: 42px;
   margin: 0 auto 32px;
-  /* color: ${props => props.theme.color.white.lessdark}; */
 `
 
 const TryItButton = styled.button`
@@ -45,7 +43,7 @@ const TryItButton = styled.button`
   text-transform: uppercase;
   cursor: pointer;
   white-space: nowrap;
-  background: #098c8c;
+  background: ${props => props.theme.color.secondary};
   border-radius: 4px;
   padding: 0px 40px;
   border-width: 0px;
@@ -61,15 +59,11 @@ const TryItButton = styled.button`
   @media (max-width: ${props => props.theme.screen.sm}) {
     margin-left: 0;
   }
-  /* color: ${props => props.theme.color.white.lessdark}; */
 `
 
 const Subtitle = styled.span`
-  font-family: "HK Grotesk Normal";
-  font-weight: 300;
+  ${props => props.theme.font_size.xxsmall}
   padding-top: 16px;
   font-size: 14px;
-  color: rgb(7, 20, 53);
-  letter-spacing: 0px;
-  /* color: ${props => props.theme.color.white.lessdark}; */
+  color: ${props => props.theme.color.primary};
 `

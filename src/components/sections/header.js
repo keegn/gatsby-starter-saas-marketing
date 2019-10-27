@@ -63,10 +63,8 @@ const HeaderWrapper = styled.header`
   }
 `
 const Subtitle = styled.h5`
-  font-family: "HK Grotesk Normal";
-  font-weight: 200;
   font-size: 16px;
-  color: #cca86e;
+  color: ${props => props.theme.color.accent};
   letter-spacing: 0px;
   margin-bottom: 16px;
 `
@@ -85,6 +83,7 @@ const HeaderTextGroup = styled.div`
 
   h1 {
     margin: 0 0 24px;
+    color: ${props => props.theme.color.primary};
   }
 
   h2 {
@@ -123,30 +122,30 @@ const FormSubtitle = styled.span`
 `
 
 const FormSubtitleLink = styled(Link)`
-  color: #098c8c;
+  color: ${props => props.theme.color.secondary};
   padding-bottom: 1px;
   margin-left: 8px;
   text-decoration: none;
-  border-bottom: 1px solid #098c8c;
+  border-bottom: 1px solid ${props => props.theme.color.secondary};
 `
 
 const HeaderInput = styled.input`
   font-weight: 500;
   font-size: 16px;
-  color: rgb(7, 20, 53);
+  color: ${props => props.theme.color.primary};
   line-height: 42px;
   width: 100%;
   text-align: left;
   height: 60px;
   border-width: 1px;
   border-style: solid;
-  border-color: #098c8c;
+  border-color: ${props => props.theme.color.secondary};
   border-image: initial;
   border-radius: 4px;
   padding: 8px 16px;
   outline: 0px;
   &:focus {
-    box-shadow: #098b8c 0px 0px 0px 2px;
+    box-shadow: inset ${props => props.theme.color.secondary} 0px 0px 0px 2px;
   }
   @media (max-width: ${props => props.theme.screen.md}) {
     margin-bottom: 8px;
@@ -168,7 +167,7 @@ const HeaderButton = styled.button`
   text-transform: uppercase;
   cursor: pointer;
   white-space: nowrap;
-  background: #098c8c;
+  background: ${props => props.theme.color.secondary};
   border-radius: 4px;
   padding: 0px 40px;
   border-width: 0px;

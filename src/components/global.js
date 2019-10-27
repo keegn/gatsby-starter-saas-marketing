@@ -29,7 +29,6 @@ export const Container = styled.div`
   `};
 `
 
-// needs more thought about the props.accent
 export const Section = styled.section`
   padding: 80px 0;
   overflow: hidden;

@@ -8,9 +8,11 @@ const GlobalStyles = createGlobalStyle`
   ${normalize};
 
   html {
-    color: ${props => props.theme.color.black.regular};
+    ${"" /* change this if implementing light/dark mode functionality */}
+    color: ${props => props.theme.color.primary};
 
   }
+  
   body {
     font-family: ${props => props.theme.font.primary};
   }

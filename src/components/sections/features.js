@@ -58,17 +58,15 @@ const StyledContainer = styled(Container)`
 `
 
 const SectionTitle = styled.h3`
-  color: black;
+  color: ${props => props.theme.color.primary};
   display: flex;
   justify-content: center;
   margin: 0 auto 40px;
 `
 
 const Subtitle = styled.h5`
-  font-family: "HK Grotesk Normal";
-  font-weight: 200;
   font-size: 16px;
-  color: #cca86e;
+  color: ${props => props.theme.color.accent};
   letter-spacing: 0px;
   margin-bottom: 12px;
   text-align: center;
@@ -95,7 +93,7 @@ const FeatureItem = styled.div`
 `
 
 const FeatureTitle = styled.h4`
-  color: rgb(7, 20, 53);
+  color: ${props => props.theme.color.primary};
   letter-spacing: 0px;
   line-height: 30px;
   margin-bottom: 10px;
