@@ -160,7 +160,7 @@ const HeaderButton = styled.button`
   font-weight: 500;
   font-size: 14px;
   color: white;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   height: 60px;
   display: block;
   margin-left: 8px;
