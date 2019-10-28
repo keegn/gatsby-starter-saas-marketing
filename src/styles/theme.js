@@ -23,18 +23,24 @@ const theme = {
   },
 
   color: {
+    primary: "#071435",
+    secondary: "#098c8c",
+    accent: "#cca86e",
+    background: {
+      white: "#ffffff",
+      light: "#f8f8f8",
+    },
     white: {
-      regular: "#FFFFFF",
-      lessdark: "#FAF9F8",
-      dark: "#F6F6F6",
-      darker: "#EEEEEE",
+      regular: "#ffffff",
+      lessdark: "#faf9f8",
+      dark: "#f6f6f6",
+      darker: "#eeeeee",
     },
     black: {
-      lighter: "#ABA8AF",
+      lightest: "#ABA8AF",
       light: "#564F62",
-      regular: "rgb(7, 20, 53)",
+      regular: "#071435",
     },
-    primary: "#132063",
   },
   screen: {
     xs: "575px",

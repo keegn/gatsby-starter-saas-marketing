@@ -8,9 +8,11 @@ const GlobalStyles = createGlobalStyle`
   ${normalize};
 
   html {
-    color: ${props => props.theme.color.black.regular};
+    ${"" /* change this if implementing light/dark mode functionality */}
+    color: ${props => props.theme.color.primary};
 
   }
+  
   body {
     font-family: ${props => props.theme.font.primary};
   }
@@ -67,6 +69,31 @@ const GlobalStyles = createGlobalStyle`
     p {
       ${props => props.theme.font_size.small};
     }
+  }
+
+  @media (max-width: ${props => props.theme.screen.xs}) {
+
+    h1 {
+
+    }
+
+    h2 {
+
+    }
+
+    h3 {
+      font-size: 32px;
+      line-height: 36px;
+    }
+
+    h4 {
+      font-size: 22px;
+      line-height: 24px;
+    }
+    p {
+
+    }
+
   }
 
   button {

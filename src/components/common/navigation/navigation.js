@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import Scrollspy from "react-scrollspy"
-import { ChevronRight } from "react-feather"
+import { Menu, X } from "react-feather"
 
 import { Container } from "../../global"
 import {
@@ -14,8 +14,6 @@ import {
   Mobile,
   ActionsContainer,
 } from "./style"
-
-// import { MenuIcon } from "../../../static/icons/menu.svg"
 
 const NAV_ITEMS = ["Features", "Products", "Pricing", ""]
 
@@ -84,8 +82,15 @@ export default class Navigation extends Component {
             </Scrollspy>
           </Brand>
           <Mobile>
-            <button onClick={this.toggleMobileMenu} style={{ color: "black" }}>
-              {/* <MenuIcon /> */}
+            <button
+              onClick={this.toggleMobileMenu}
+              style={{ color: "black", background: "none" }}
+            >
+              {this.state.mobileMenuOpen ? (
+                <X size={24} alt="close menu" />
+              ) : (
+                <Menu size={24} alt="open menu" />
+              )}
             </button>
           </Mobile>
 

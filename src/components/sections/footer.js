@@ -38,7 +38,7 @@ const Footer = () => (
     </FooterColumnContainer>
     <BrandContainer>
       <Logo>Finance</Logo>
-      {/* <Copyright>Copyright © 2019 Gatsbee, Inc. All rights reserved.</Copyright> */}
+      {/* <Copyright>Copyright © 2019 Finance, Inc. All rights reserved.</Copyright> */}
     </BrandContainer>
   </FooterWrapper>
 )
@@ -101,8 +101,8 @@ const FooterColumnContainer = styled(Container)`
 const FooterColumn = styled.div`
   span {
     font-size: 16px;
-    font-family: "HK Grotesk Bold";
-    color: ${props => props.theme.color.black.regular};
+    font-family: ${props => props.theme.font.bold};
+    color: ${props => props.theme.color.primary};
   }
   ul {
     list-style: none;
@@ -111,7 +111,7 @@ const FooterColumn = styled.div`
     color: ${props => props.theme.color.black.regular};
     li {
       margin-bottom: 12px;
-      font-family: "HK Grotesk Normal";
+      font-family: ${props => props.theme.font.normal};
       font-size: 15px;
     }
   }
