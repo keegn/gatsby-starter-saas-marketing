@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import Scrollspy from "react-scrollspy"
-import { Menu } from "react-feather"
+import { Menu, X } from "react-feather"
 
 import { Container } from "../../global"
 import {
@@ -86,7 +86,11 @@ export default class Navigation extends Component {
               onClick={this.toggleMobileMenu}
               style={{ color: "black", background: "none" }}
             >
-              <Menu size={24} alt="menu button" />
+              {this.state.mobileMenuOpen ? (
+                <X size={24} alt="close menu" />
+              ) : (
+                <Menu size={24} alt="open menu" />
+              )}
             </button>
           </Mobile>
 

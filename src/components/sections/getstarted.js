@@ -30,6 +30,7 @@ const GetStartedContainer = styled(Container)`
 
 const GetStartedTitle = styled.h3`
   margin: 0 auto 32px;
+  text-align: center;
 `
 
 const TryItButton = styled.button`

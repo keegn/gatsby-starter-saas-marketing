@@ -71,6 +71,31 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
+  @media (max-width: ${props => props.theme.screen.xs}) {
+
+    h1 {
+
+    }
+
+    h2 {
+
+    }
+
+    h3 {
+      font-size: 32px;
+      line-height: 36px;
+    }
+
+    h4 {
+      font-size: 22px;
+      line-height: 24px;
+    }
+    p {
+
+    }
+
+  }
+
   button {
     border: none;
     background: none;

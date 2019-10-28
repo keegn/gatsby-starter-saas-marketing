@@ -6,7 +6,7 @@ import { Section, Container } from "../global"
 const Features = () => (
   <Section id="features">
     <StyledContainer>
-      <Subtitle>Automation</Subtitle>
+      <Subtitle>Features</Subtitle>
       <SectionTitle>Smart money management</SectionTitle>
       <FeaturesGrid>
         <FeatureItem>
@@ -62,6 +62,7 @@ const SectionTitle = styled.h3`
   display: flex;
   justify-content: center;
   margin: 0 auto 40px;
+  text-align: center;
 `
 
 const Subtitle = styled.h5`
