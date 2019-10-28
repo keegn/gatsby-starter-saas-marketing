@@ -77,7 +77,7 @@ const HeaderTextGroup = styled.div`
     margin-bottom: -4.5%;
 
     @media (max-width: ${props => props.theme.screen.md}) {
-      width: 100%;
+      margin: 0 16px;
     }
   }
 
@@ -198,6 +198,7 @@ const StyledImage = styled(Img)`
     width: 400px;
   }
   @media (max-width: ${props => props.theme.screen.sm}) {
-    width: 364px;
+    width: 300px;
+    display: none;
   }
 `
