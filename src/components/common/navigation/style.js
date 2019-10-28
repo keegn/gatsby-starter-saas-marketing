@@ -86,6 +86,9 @@ export const Brand = styled.div`
 export const ActionsContainer = styled.div`
   display: flex;
   align-items: center;
+  @media (max-width: ${props => props.theme.screen.xs}) {
+    display: none;
+  }
 
   button {
     font-family: ${props => props.theme.font.normal};
@@ -102,7 +105,7 @@ export const ActionsContainer = styled.div`
 export const Mobile = styled.div`
   display: none;
 
-  @media (max-width: ${props => props.theme.screen.md}) {
+  @media (max-width: ${props => props.theme.screen.xs}) {
     display: block;
   }
 
@@ -111,7 +114,7 @@ export const Mobile = styled.div`
     `
     display: block;
 
-    @media (max-width: ${props.theme.screen.md}) {
+    @media (max-width: ${props.theme.screen.xs}) {
       display: none;
     }
   `}
