@@ -12,20 +12,20 @@ const Features = () => (
         <FeatureItem>
           <FeatureTitle>Notifications</FeatureTitle>
           <FeatureText>
-            Receive budget and spending alerts based on your custom triggers.
+            Receive budget and spending alerts based on your favorite triggers.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
           <FeatureTitle>Security</FeatureTitle>
           <FeatureText>
-            Your data is always safe with us as we use the lastest encryption
-            techniques.
+            Your data is always safe with us as we use the lastest security
+            protocols.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
           <FeatureTitle>Automation</FeatureTitle>
           <FeatureText>
-            Create smart automatation workflows and triggers for your money.
+            Create smart automated workflows and triggers for your money.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
@@ -41,7 +41,7 @@ const Features = () => (
         <FeatureItem>
           <FeatureTitle>Rewards</FeatureTitle>
           <FeatureText>
-            High interest and gift card rewards for just for saving money.
+            High interest and rewards for hitting our paycheck percentage goals.
           </FeatureText>
         </FeatureItem>
       </FeaturesGrid>

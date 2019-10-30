@@ -15,7 +15,7 @@ import {
   ActionsContainer,
 } from "./style"
 
-const NAV_ITEMS = ["Features", "Products", "Pricing", ""]
+const NAV_ITEMS = ["Features", "Product", "Pricing", ""]
 
 export default class Navigation extends Component {
   state = {

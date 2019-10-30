@@ -10,8 +10,7 @@ const Footer = () => (
         <span>Features</span>
         <ul>
           <li>Automation</li>
-          <li>Investing</li>
-          <li>Payments</li>
+          <li>Rewards</li>
         </ul>
       </FooterColumn>
       <FooterColumn>
@@ -31,8 +30,8 @@ const Footer = () => (
       <FooterColumn>
         <span>Social</span>
         <ul>
-          <li>Something here</li>
-          <li>Something here</li>
+          <li>LinkedIn</li>
+          <li>Instagram</li>
         </ul>
       </FooterColumn>
     </FooterColumnContainer>
@@ -42,20 +41,6 @@ const Footer = () => (
     </BrandContainer>
   </FooterWrapper>
 )
-
-// const SocialIcons = styled.div`
-//   display: flex;
-
-//   img {
-//     margin: 0 8px;
-//     width: 24px;
-//     height: 24px;
-//   }
-
-//   @media (max-width: ${props => props.theme.screen.sm}) {
-//     margin-top: 40px;
-//   }
-// `
 
 const FooterWrapper = styled.footer`
   background-color: white;
