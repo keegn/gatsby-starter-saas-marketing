@@ -18,6 +18,10 @@ const Header = () => {
     }
   `)
 
+  const handleSubmit = event => {
+    event.preventDefault()
+  }
+
   return (
     <HeaderWrapper id="top">
       <Container>
@@ -33,7 +37,7 @@ const Header = () => {
               We're building next generation personal finance tools. Sign up to
               get early accesss.
             </h2>
-            <HeaderForm>
+            <HeaderForm onSubmit={handleSubmit}>
               <HeaderInput placeholder="Your email" />
               <HeaderButton>Early access</HeaderButton>
             </HeaderForm>
