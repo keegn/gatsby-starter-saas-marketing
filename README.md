@@ -1,6 +1,6 @@
 ## gatsby-starter-saas-marketing
 
-### 💽 a simple one page Gatsby starter for SaaS companies and products. 
+### 💽 A simple one page marketing site starter for SaaS companies and products.
 
 [Live Demo: https://gatsby-starter-saas-marketing.netlify.com/ ](https://gatsby-starter-saas-marketing.netlify.com/)
 
