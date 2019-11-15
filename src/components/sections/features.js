@@ -18,7 +18,7 @@ const Features = () => (
         <FeatureItem>
           <FeatureTitle>Security</FeatureTitle>
           <FeatureText>
-            Your data is always safe with us as we use the lastest security
+            Your data is always safe with us as we use the latest security
             protocols.
           </FeatureText>
         </FeatureItem>
@@ -31,7 +31,7 @@ const Features = () => (
         <FeatureItem>
           <FeatureTitle>Aggregation</FeatureTitle>
           <FeatureText>
-            Easily link up to 5 banks to your finace account.
+            Easily link up to 5 banks to your finance account.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
@@ -41,7 +41,7 @@ const Features = () => (
         <FeatureItem>
           <FeatureTitle>Rewards</FeatureTitle>
           <FeatureText>
-            High interest and rewards for hitting our paycheck percentage goals.
+            High interest and rewards for hitting your goals.
           </FeatureText>
         </FeatureItem>
       </FeaturesGrid>

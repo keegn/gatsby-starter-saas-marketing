@@ -35,7 +35,7 @@ const Header = () => {
             </h1>
             <h2>
               We're building next generation personal finance tools. Sign up to
-              get early accesss.
+              get early access.
             </h2>
             <HeaderForm onSubmit={handleSubmit}>
               <HeaderInput placeholder="Your email" />
