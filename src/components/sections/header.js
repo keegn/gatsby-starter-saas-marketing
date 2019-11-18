@@ -45,7 +45,12 @@ const Header = () => {
             >
               <input type="hidden" name="bot-field" />
               <input type="hidden" name="form-name" value="early-access" />
-              <HeaderInput type="email" placeholder="Your email" />
+              <HeaderInput
+                type="email"
+                placeholder="Your email"
+                name="email"
+                id="email"
+              />
               <HeaderButton>Early access</HeaderButton>
             </HeaderForm>
             <FormSubtitle>
