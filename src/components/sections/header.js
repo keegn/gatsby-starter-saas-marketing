@@ -18,9 +18,9 @@ const Header = () => {
     }
   `)
 
-  const handleSubmit = event => {
-    event.preventDefault()
-  }
+  // const handleSubmit = event => {
+  //   event.preventDefault()
+  // }
 
   return (
     <HeaderWrapper id="top">
@@ -37,8 +37,14 @@ const Header = () => {
               We're building next generation personal finance tools. Sign up to
               get early access.
             </h2>
-            <HeaderForm onSubmit={handleSubmit}>
-              <HeaderInput placeholder="Your email" />
+            <HeaderForm
+              name="early-access"
+              method="post"
+              netlify-honeypot="bot-field"
+              data-netlify="true"
+            >
+              <input type="hidden" name="bot-field" />
+              <HeaderInput type="email" placeholder="Your email" />
               <HeaderButton>Early access</HeaderButton>
             </HeaderForm>
             <FormSubtitle>
