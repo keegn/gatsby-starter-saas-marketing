@@ -5,7 +5,7 @@
 ### Getting started
 
 install Gatsby CLI - [more info](https://www.gatsbyjs.org/tutorial/part-zero/)
-#### `npm install -g gatsby-cli` or `yarn global add gatsby-cli`
+##### `npm install -g gatsby-cli` or `yarn global add gatsby-cli`
 ---
 
 install the starter locally:
