@@ -4,27 +4,37 @@
 
 [Live Demo: https://gatsby-starter-saas-marketing.netlify.com/ ](https://gatsby-starter-saas-marketing.netlify.com/)
 
-## Getting started
+### Getting started
 
-install dependencies:
-#### `yarn install`
-
-
+install the starter locally:
+##### `gatsby new gatsby-starter-saas-marketing https://github.com/keegn/gatsby-starter-saas-marketing`
+---
+install dependencies: 
+##### `yarn install`
+---
 start the development server:
-#### `gatsby develop`
-
-
+##### `gatsby develop`
+---
 At the project root, compile your application deployment:
-#### `gatsby build`
-
-
+##### `gatsby build`
+---
 Clean the cache to fix certain errors - run the clean command before starting the dev sever.
-####  `gatsby clean`
-
+#####  `gatsby clean`
+---
 At the project root, serve the production build of your site:
-####  `gatsby serve`
-
-
+##### `gatsby serve`
+---
 ### Styles
 
 This starter uses [styled-components](https://www.styled-components.com/). The theme file contains the base styles `src/styles/theme.js` and the global styles file contains basic element styles and a style reset `src/styles/GlobalStyles.js`.
+
+---
+
+### Deploying to Netlify
+
+[Deployment Guide](http://gatsbyjs.org/docs/deploying-to-netlify)
+
+---
+### Collect emails with Netlify Forms
+
+[How to make a Contact Form in Gatsby with Netlify (Youtube)](https://www.youtube.com/watch?v=hF7xJhzrr9s&feature=emb_title)
