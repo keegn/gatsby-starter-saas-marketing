@@ -40,10 +40,11 @@ const Header = () => {
             <HeaderForm
               name="early-access"
               method="post"
-              netlify-honeypot="bot-field"
+              data-netlify-honeypot="bot-field"
               data-netlify="true"
             >
               <input type="hidden" name="bot-field" />
+              <input type="hidden" name="form-name" value="early-access" />
               <HeaderInput type="email" placeholder="Your email" />
               <HeaderButton>Early access</HeaderButton>
             </HeaderForm>
