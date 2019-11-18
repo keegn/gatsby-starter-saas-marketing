@@ -1,10 +1,12 @@
-## gatsby-starter-saas-marketing
-
-### ☁️ A simple one page marketing site starter for SaaS companies and products.
+## ☁️ A simple one page marketing site starter for SaaS companies and products.
 
 [Live Demo: https://gatsby-starter-saas-marketing.netlify.com/ ](https://gatsby-starter-saas-marketing.netlify.com/)
 
 ### Getting started
+
+install Gatsby CLI - [more info](https://www.gatsbyjs.org/tutorial/part-zero/)
+#### `npm install -g gatsby-cli` or `yarn global add gatsby-cli`
+---
 
 install the starter locally:
 ##### `gatsby new gatsby-starter-saas-marketing https://github.com/keegn/gatsby-starter-saas-marketing`
@@ -15,10 +17,10 @@ install dependencies:
 start the development server:
 ##### `gatsby develop`
 ---
-At the project root, compile your application deployment:
+At the project root, compile your application for deployment:
 ##### `gatsby build`
 ---
-Clean the cache to fix certain errors - run the clean command before starting the dev sever.
+Clean the cache to fix certain errors - run the clean command before starting the dev server.
 #####  `gatsby clean`
 ---
 At the project root, serve the production build of your site:
@@ -37,4 +39,28 @@ This starter uses [styled-components](https://www.styled-components.com/). The t
 ---
 ### Collect emails with Netlify Forms
 
-[How to make a Contact Form in Gatsby with Netlify (Youtube)](https://www.youtube.com/watch?v=hF7xJhzrr9s&feature=emb_title)
+[Form Handling with Gatsby.js V2 and Netlify](https://codebushi.com/form-handling-gatsby-netlify/)
+
+---
+### Netlify form usage example
+
+In `header.js` replacing the existing `<HeaderForm>...</HeaderForm>` elements with the following should provide a working example once your site is deployed: 
+```
+<HeaderForm
+ name="early-access"
+ method="post"
+ data-netlify-honeypot="bot-field"
+ data-netlify="true"
+>
+  <input type="hidden" name="bot-field" />
+  <input type="hidden" name="form-name" value="early-access" />
+  <HeaderInput
+   type="email"
+   placeholder="Your email"
+   name="email"
+   id="email"
+   required
+  />
+  <HeaderButton>Early access</HeaderButton>
+</HeaderForm>
+```
