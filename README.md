@@ -44,7 +44,7 @@ This starter uses [styled-components](https://www.styled-components.com/). The t
 ---
 ### Netlify form usage example
 
-In `header.js` replacing the existing `<HeaderForm>...</HeaderForm>` elements with the following should provide a working example once your site is deployed: 
+In `header.js` replacing the existing `<HeaderForm>...</HeaderForm>` components with the following should provide a working example once your site is deployed: 
 ```
 <HeaderForm
  name="early-access"
