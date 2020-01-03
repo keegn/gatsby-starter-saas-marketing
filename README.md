@@ -6,7 +6,11 @@
 
 install Gatsby CLI - [more info](https://www.gatsbyjs.org/tutorial/part-zero/)
 ```sh
-npm install -g gatsby-cli` or `yarn global add gatsby-cli
+npm install -g gatsby-cli
+```
+or 
+```sh
+yarn global add gatsby-cli
 ```
 ---
 
