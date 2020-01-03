@@ -5,26 +5,40 @@
 ### Getting started
 
 install Gatsby CLI - [more info](https://www.gatsbyjs.org/tutorial/part-zero/)
-##### `npm install -g gatsby-cli` or `yarn global add gatsby-cli`
+```sh
+npm install -g gatsby-cli` or `yarn global add gatsby-cli
+```
 ---
 
 install the starter locally:
-##### `gatsby new gatsby-starter-saas-marketing https://github.com/keegn/gatsby-starter-saas-marketing`
+```sh
+gatsby new gatsby-starter-saas-marketing https://github.com/keegn/gatsby-starter-saas-marketing
+```
 ---
 install dependencies: 
-##### `yarn install`
+```sh
+yarn install
+```
 ---
 start the development server:
-##### `gatsby develop`
+```sh
+gatsby develop
+```
 ---
 At the project root, compile your application for deployment:
-##### `gatsby build`
+```sh
+gatsby build
+```
 ---
 Clean the cache to fix certain errors - run the clean command before starting the dev server.
-#####  `gatsby clean`
+```sh
+gatsby clean
+```
 ---
 At the project root, serve the production build of your site:
-##### `gatsby serve`
+```sh
+gatsby serve
+```
 ---
 ### Styles
 
