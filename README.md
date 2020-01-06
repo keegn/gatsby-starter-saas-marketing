@@ -34,7 +34,7 @@ At the project root, compile your application for deployment:
 gatsby build
 ```
 ---
-Clean the cache to fix certain errors - run the clean command before starting the dev server.
+Clean the cache to fix certain errors - run the clean command before starting the dev server:
 ```sh
 gatsby clean
 ```
