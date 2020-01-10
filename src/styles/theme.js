@@ -16,10 +16,10 @@ const theme = {
     xxsmall: "font-size: 14px;",
     xsmall: "font-size: 16px;",
     small: "font-size: 17px;",
-    regular: "font-size: 22px; line-height: 30px",
-    large: "font-size: 28px; line-height: 30px",
-    larger: "font-size: 40px; line-height: 50px",
-    xlarge: "font-size: 48px; line-height: 48px",
+    regular: "font-size: 22px; line-height: 30px;",
+    large: "font-size: 28px; line-height: 30px;",
+    larger: "font-size: 40px; line-height: 50px;",
+    xlarge: "font-size: 48px; line-height: 48px;",
   },
 
   color: {
