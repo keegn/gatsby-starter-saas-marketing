@@ -51,11 +51,7 @@ const Features = () => (
 
 export default Features
 
-const StyledContainer = styled(Container)`
-  /* transform: skewY(5deg);
-  border-radius: 4px;
-  background-image: linear-gradient(to top, #fefefe 0%, #fbfbfb 100%); */
-`
+const StyledContainer = styled(Container)``
 
 const SectionTitle = styled.h3`
   color: ${props => props.theme.color.primary};

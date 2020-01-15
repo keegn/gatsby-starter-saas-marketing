@@ -37,7 +37,6 @@ const Footer = () => (
     </FooterColumnContainer>
     <BrandContainer>
       <Logo>Finance</Logo>
-      {/* <Copyright>Copyright © 2019 Finance, Inc. All rights reserved.</Copyright> */}
     </BrandContainer>
   </FooterWrapper>
 )

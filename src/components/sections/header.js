@@ -46,10 +46,10 @@ const Header = () => {
               <FormSubtitleLink to="/">Sign in</FormSubtitleLink>
             </FormSubtitle>
           </HeaderTextGroup>
-          <Text>
+          <ImageWrapper>
             <StyledImage fluid={data.file.childImageSharp.fluid} />
             <br />
-          </Text>
+          </ImageWrapper>
         </Flex>
       </Container>
     </HeaderWrapper>
@@ -188,7 +188,7 @@ const HeaderButton = styled.button`
     margin-left: 0;
   }
 `
-const Text = styled.div`
+const ImageWrapper = styled.div`
   justify-self: end;
   align-self: center;
   @media (max-width: ${props => props.theme.screen.md}) {
