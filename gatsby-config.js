@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter SaaS Marketing`,
-    description: `A simple one page marketing starter for saas companies.`,
-    author: `Keegan Burkett`,
+    title: `Hibana`,
+    description: `A platform to discover and browse independent brands.`,
+    author: `Tech Guy`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -37,7 +37,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`,
+        icon: `src/images/hibana_logo_h.png`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

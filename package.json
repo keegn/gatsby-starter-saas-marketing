@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Keegan Burkett <keegan.t.marciniak@gmail.com>",
   "dependencies": {
+    "@statickit/cli": "0.9.0",
     "gatsby": "^2.15.31",
     "gatsby-image": "^2.2.24",
     "gatsby-plugin-manifest": "^2.2.20",
