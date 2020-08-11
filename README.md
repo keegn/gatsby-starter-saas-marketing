@@ -2,6 +2,8 @@
 
 [Live Demo: https://gatsby-starter-saas-marketing.netlify.com/ ](https://gatsby-starter-saas-marketing.netlify.com/)
 
+<img src="src/images/gatsby-starter-saas-marketing-full-page.png?raw=true" width="600" alt="Gatsby Starter Saas Marketing Full Screen Image"/>
+
 ### Getting started
 
 install Gatsby CLI - [more info](https://www.gatsbyjs.org/tutorial/part-zero/)
