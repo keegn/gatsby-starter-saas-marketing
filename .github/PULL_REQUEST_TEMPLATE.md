@@ -1,14 +1,11 @@
 <!-- FILL OUT THE BELOW FORM OR YOUR PR WILL BE AUTOMATICALLY CLOSED -->
 
-Work in Progress Template!
-
 **Status**
 
 - [ ] WIP
 - [ ] Ready for review
+- [ ] Deploy preview build succeeded and preview looks good.
 - [ ] Needs testing
-
-## **Release notes for users (delete if codebase-only change)**
 
 **Related issues (delete if you don't know of any)**
 Closes #
