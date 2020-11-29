@@ -33,6 +33,7 @@ module.exports = {
     {
       resolve: "gatsby-omni-font-loader",
       options: {
+        enableListener: false,
         custom: [
           {
             name: [
@@ -48,7 +49,8 @@ module.exports = {
           },
         ],
       },
-    }`gatsby-transformer-sharp`,
+    },
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
