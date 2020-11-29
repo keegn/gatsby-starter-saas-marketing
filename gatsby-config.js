@@ -30,7 +30,25 @@ module.exports = {
         path: `${__dirname}/src/images/product`,
       },
     },
-    `gatsby-transformer-sharp`,
+    {
+      resolve: "gatsby-omni-font-loader",
+      options: {
+        custom: [
+          {
+            name: [
+              "HK Grotesk Extra Bold",
+              "HK Grotesk Medium",
+              "HK Grotesk Normal",
+              "HK Grotesk Light",
+              "HK Grotesk Black",
+              "HK Grotesk Bold",
+              "HK Grotesk Semibold",
+            ],
+            file: "/fonts/fonts.css",
+          },
+        ],
+      },
+    }`gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
