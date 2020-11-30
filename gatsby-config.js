@@ -33,7 +33,7 @@ module.exports = {
     {
       resolve: "gatsby-omni-font-loader",
       options: {
-        enableListener: false,
+        enableListener: true,
         custom: [
           {
             name: [
