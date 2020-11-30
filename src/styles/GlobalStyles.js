@@ -12,32 +12,39 @@ const GlobalStyles = createGlobalStyle`
     color: ${props => props.theme.color.primary};
 
   }
+
+  body:not(.wf-hk-grotesk-normal--loaded) {
+  font-family: Arial, Helvetica, sans-serif;
+  ${props => props.theme.font_size.xsmall};
+  line-height: 1.15;
+  letter-spacing: 0.2px;
+  font-weight: 100;
+
+  h2,
+  h5 {
+    font-weight: 400;
+  }
+  
+  h2 {
+    font-size: 21px;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+  }
+}
+
   
   .wf-hk-grotesk-normal--loaded {
     font-family: ${props => props.theme.font.primary};
   }
 
-  body:not(.wf-hk-grotesk-normal--loaded) {
-    font-family: Arial, Helvetica, sans-serif;
-    ${props => props.theme.font_size.xsmall};
-    line-height: 1.15;
-    letter-spacing: 0.2px;
-
-    h2, h5 {
-      font-weight: 400;
-    }
-
-    h2 {
-      font-size: 21px;
-      line-height: 1.4;
-      letter-spacing: 0.5px;
+  .wf-hk-grotesk-bold--loaded {
+    h1, h3, h4 {
+      font-family: ${props => props.theme.font.bold};
     }
   }
   
   h1 {
     ${props => props.theme.font_size.xlarge};
-    font-family: ${props => props.theme.font.bold};
-    
   }
 
   h2 {
@@ -46,12 +53,10 @@ const GlobalStyles = createGlobalStyle`
 
   h3 {
     ${props => props.theme.font_size.larger};
-    font-family: ${props => props.theme.font.bold};
   }
 
   h4 {
     ${props => props.theme.font_size.large};
-    font-family: ${props => props.theme.font.bold};
   }
 
   h5 {
