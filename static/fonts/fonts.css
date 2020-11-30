@@ -3,6 +3,7 @@
   src: url("./HKGrotesk-ExtraBold.woff2") format("woff2"),
     url("./HKGrotesk-ExtraBold.woff") format("woff");
   /* font-weight: 800; */
+  font-display: swap;
   font-style: normal;
 }
 
@@ -10,6 +11,7 @@
   font-family: "HK Grotesk Medium";
   src: url("./HKGrotesk-Medium.woff2") format("woff2"),
     url("./HKGrotesk-Medium.woff") format("woff");
+  font-display: swap;
   font-style: normal;
 }
 
@@ -19,6 +21,7 @@
     url("./HKGrotesk-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -27,6 +30,7 @@
     url("./HKGrotesk-Light.woff") format("woff");
   /* font-weight: 300; */
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -35,6 +39,7 @@
     url("./HKGrotesk-Black.woff") format("woff");
   /* font-weight: 900; */
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -43,6 +48,7 @@
     url("./HKGrotesk-Bold.woff") format("woff");
   /* font-weight: bold; */
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -51,4 +57,5 @@
     url("./HKGrotesk-SemiBold.woff") format("woff");
   /* font-weight: 600; */
   font-style: normal;
+  font-display: swap;
 }
