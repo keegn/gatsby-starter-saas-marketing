@@ -2,7 +2,7 @@
 
 [Live Demo: https://gatsby-starter-saas-marketing.netlify.com/ ](https://gatsby-starter-saas-marketing.netlify.com/)
 
-If you find this starter helpful, feel free to give me a follow on <a href="https://www.indiehackers.com/keeg" target="blank">Indie Hackers</a>.
+**If you find this starter helpful follow me on <a href="https://www.indiehackers.com/keeg" target="blank">Indie Hackers</a>.**
 
 <img src="src/images/gatsby-starter-saas-marketing-full-page.png?raw=true" width="600" alt="Gatsby Starter Saas Marketing Full Screen Image"/>
 
