@@ -1,4 +1,3 @@
-// Theme
 
 const theme = {
   font: {
