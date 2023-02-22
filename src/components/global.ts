@@ -1,6 +1,10 @@
 import styled from "styled-components"
 
-export const Container = styled.div`
+interface ContainerProps {
+  fluid?: boolean,
+}
+
+export const Container = styled.div<ContainerProps>`
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
@@ -23,20 +27,20 @@ export const Container = styled.div`
   }
 
   ${props =>
-    // TODO FIX ME
-    // @ts-ignore
     props.fluid &&
     `
     max-width: 1200px !important;
   `};
 `
 
-export const Section = styled.section`
+interface SectionProps {
+  accent: string,
+}
+
+export const Section = styled.section <SectionProps>`
   padding: 80px 0;
   overflow: hidden;
   background-color: ${props => {
-    // TODO FIX ME
-    // @ts-ignore
     switch (props.accent) {
       case "secondary":
         return props.theme.color.white.dark
@@ -52,13 +56,8 @@ export const Section = styled.section`
   }
 
   ${props =>
-    // TODO FIX ME
-    // @ts-ignore
     props.accent &&
-    `background-color: ${
-    // TODO FIX ME
-    // @ts-ignore
-    props.accent === "secondary"
+    `background-color: ${props.accent === "secondary"
       ? props.theme.color.white.dark
       : props.theme.color.primary
     }`};

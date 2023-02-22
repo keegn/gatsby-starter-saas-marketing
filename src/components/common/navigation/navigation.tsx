@@ -17,31 +17,6 @@ import {
 
 const NAV_ITEMS = ["Features", "Product", "Pricing", ""]
 
-
-// TODO refactor this into a new component
-const getNavAnchorLink = (item: string, closeMobileMenu: () => void) => (
-  <AnchorLink href={`#${item.toLowerCase()}`} onClick={closeMobileMenu}>
-    {item}
-  </AnchorLink>
-)
-
-// TODO refactor this into a new component
-const getNavList = (mobile: boolean, closeMobileMenu: () => void) => (
-  <NavListWrapper mobile={mobile}>
-    <Scrollspy
-      items={NAV_ITEMS.map(item => item.toLowerCase())}
-      currentClassName="active"
-      mobile={mobile}
-      offset={-64}
-    >
-      {NAV_ITEMS.map(navItem => (
-        <NavItem key={navItem}>{getNavAnchorLink(navItem, closeMobileMenu)}</NavItem>
-      ))}
-    </Scrollspy>
-  </NavListWrapper>
-)
-
-
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [hasScrolled, setHasScrolled] = useState(false)
@@ -67,6 +42,27 @@ const Navigation = () => {
     setMobileMenuOpen(false)
   }
 
+  const getNavAnchorLink = (item: string) => (
+    <AnchorLink href={`#${item.toLowerCase()}`} onClick={closeMobileMenu}>
+      {item}
+    </AnchorLink>
+  )
+
+  const getNavList = ({ mobile = false }: { mobile?: boolean }) => (
+    <NavListWrapper mobile={mobile}>
+      <Scrollspy
+        items={NAV_ITEMS.map(item => item.toLowerCase())}
+        currentClassName="active"
+        mobile={mobile}
+        offset={-64}
+      >
+        {NAV_ITEMS.map(navItem => (
+          <NavItem key={navItem}>{getNavAnchorLink(navItem)}</NavItem>
+        ))}
+      </Scrollspy>
+    </NavListWrapper>
+  )
+
   return (
     <Nav scrolled={hasScrolled}>
       <StyledContainer>
@@ -90,7 +86,7 @@ const Navigation = () => {
           </button>
         </Mobile>
 
-        <Mobile hide={true}>{getNavList(false, closeMobileMenu)}</Mobile>
+        <Mobile hide={true}>{getNavList({})}</Mobile>
         <ActionsContainer>
           <button>Sign up</button>
         </ActionsContainer>
@@ -98,7 +94,7 @@ const Navigation = () => {
       <Mobile>
         {mobileMenuOpen && (
           <MobileMenu>
-            <Container>{getNavList(true, closeMobileMenu)}</Container>
+            <Container>{getNavList({ mobile: true })}</Container>
           </MobileMenu>
         )}
       </Mobile>
