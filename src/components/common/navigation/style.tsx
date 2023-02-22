@@ -27,8 +27,8 @@ export const NavListWrapper = styled.div`
     flex-direction: row;
 
     ${({ mobile }) =>
-      mobile &&
-      `
+    mobile &&
+    `
         flex-direction: column;
         margin-top: 1em;
 
@@ -110,6 +110,8 @@ export const Mobile = styled.div`
   }
 
   ${props =>
+    // TODO FIX ME
+    // @ts-ignore
     props.hide &&
     `
     display: block;

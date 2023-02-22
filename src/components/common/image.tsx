@@ -24,7 +24,7 @@ const Image = () => {
     }
   `)
 
-  return <GatsbyImage image={data.placeholderImage.childImageSharp.gatsbyImageData} />
+  return <GatsbyImage alt="Sample Image" image={data.placeholderImage.childImageSharp.gatsbyImageData} />
 }
 
 export default Image

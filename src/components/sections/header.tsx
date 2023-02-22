@@ -46,7 +46,7 @@ const Header = () => {
             </FormSubtitle>
           </HeaderTextGroup>
           <ImageWrapper>
-            <StyledImage image={data.file.childImageSharp.gatsbyImageData} />
+            <StyledImage alt="Header Image" image={data.file.childImageSharp.gatsbyImageData} />
             <br />
           </ImageWrapper>
         </Flex>

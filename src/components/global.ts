@@ -23,6 +23,8 @@ export const Container = styled.div`
   }
 
   ${props =>
+    // TODO FIX ME
+    // @ts-ignore
     props.fluid &&
     `
     max-width: 1200px !important;
@@ -33,6 +35,8 @@ export const Section = styled.section`
   padding: 80px 0;
   overflow: hidden;
   background-color: ${props => {
+    // TODO FIX ME
+    // @ts-ignore
     switch (props.accent) {
       case "secondary":
         return props.theme.color.white.dark
@@ -48,10 +52,14 @@ export const Section = styled.section`
   }
 
   ${props =>
+    // TODO FIX ME
+    // @ts-ignore
     props.accent &&
     `background-color: ${
-      props.accent === "secondary"
-        ? props.theme.color.white.dark
-        : props.theme.color.primary
+    // TODO FIX ME
+    // @ts-ignore
+    props.accent === "secondary"
+      ? props.theme.color.white.dark
+      : props.theme.color.primary
     }`};
 `
