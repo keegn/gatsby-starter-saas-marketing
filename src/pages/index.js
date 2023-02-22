@@ -11,7 +11,6 @@ import GetStarted from "../components/sections/getstarted"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
     <Navigation />
     <Header />
     <Features />
@@ -19,5 +18,11 @@ const IndexPage = () => (
     <Footer />
   </Layout>
 )
+
+export function Head() {
+  return (
+    <SEO />
+  )
+}
 
 export default IndexPage
