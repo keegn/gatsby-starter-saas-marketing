@@ -2,7 +2,11 @@ import styled from "styled-components"
 
 import { Container } from "../../global"
 
-export const Nav = styled.nav`
+interface NavProps {
+  scrolled: boolean,
+}
+
+export const Nav = styled.nav <NavProps>`
   padding: ${props => (props.scrolled ? `16px 0` : `24px 0`)};
   position: fixed;
   width: 100%;
@@ -18,7 +22,11 @@ export const StyledContainer = styled(Container)`
   align-items: center;
 `
 
-export const NavListWrapper = styled.div`
+interface NavListWrapperProps {
+  mobile: boolean,
+}
+
+export const NavListWrapper = styled.div <NavListWrapperProps>`
   ul {
     list-style: none;
     margin: 0;
@@ -62,7 +70,7 @@ export const MobileMenu = styled.div`
   width: 100%;
   height: 100vh;
   z-index: 1000;
-  background: ${props => props.theme.color.regular};
+  background: ${props => props.theme.color.black.regular};
 `
 
 export const Brand = styled.div`
@@ -102,7 +110,10 @@ export const ActionsContainer = styled.div`
   }
 `
 
-export const Mobile = styled.div`
+interface MobileProps {
+  hide?: boolean,
+}
+export const Mobile = styled.div <MobileProps>`
   display: none;
 
   @media (max-width: ${props => props.theme.screen.xs}) {
@@ -110,8 +121,6 @@ export const Mobile = styled.div`
   }
 
   ${props =>
-    // TODO FIX ME
-    // @ts-ignore
     props.hide &&
     `
     display: block;
