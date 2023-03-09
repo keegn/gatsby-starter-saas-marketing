@@ -7,9 +7,10 @@ module.exports = {
     title: `Gatsby Starter SaaS Marketing`,
     description: `A simple one page marketing starter for saas companies.`,
     author: `Keegan Burkett`,
+    image: `/gatsby-icon.png`,
+    url: `www.gatsbyjs.com`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-google-analytics`,

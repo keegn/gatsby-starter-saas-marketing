@@ -1,7 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery, Link } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
+
 
 import { Container } from "../global"
 
@@ -10,9 +11,7 @@ const Header = () => {
     query {
       file(sourceInstanceName: { eq: "product" }, name: { eq: "green-skew" }) {
         childImageSharp {
-          fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
+          gatsbyImageData(layout: CONSTRAINED)
         }
       }
     }
@@ -47,7 +46,7 @@ const Header = () => {
             </FormSubtitle>
           </HeaderTextGroup>
           <ImageWrapper>
-            <StyledImage fluid={data.file.childImageSharp.fluid} />
+            <StyledImage alt="Header Image" image={data.file.childImageSharp.gatsbyImageData} />
             <br />
           </ImageWrapper>
         </Flex>
@@ -194,9 +193,17 @@ const ImageWrapper = styled.div`
   @media (max-width: ${props => props.theme.screen.md}) {
     justify-self: center;
   }
+  width: 500px;
+  @media (max-width: ${props => props.theme.screen.md}) {
+    width: 400px;
+  }
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    width: 300px;
+    display: none;
+  }
 `
 
-const StyledImage = styled(Img)`
+const StyledImage = styled(GatsbyImage)`
   width: 500px;
   @media (max-width: ${props => props.theme.screen.md}) {
     width: 400px;

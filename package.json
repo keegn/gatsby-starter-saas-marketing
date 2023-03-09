@@ -5,28 +5,27 @@
   "version": "0.1.0",
   "author": "Keegan Burkett <keegan.2.burkett@gmail.com>",
   "dependencies": {
-    "gatsby": "^4.20.0",
-    "gatsby-image": "^3.11.0",
-    "gatsby-plugin-google-analytics": "^4.20.0",
-    "gatsby-plugin-manifest": "^4.20.0",
-    "gatsby-plugin-offline": "^5.20.0",
-    "gatsby-plugin-react-helmet": "^5.20.0",
-    "gatsby-plugin-sharp": "^4.20.0",
-    "gatsby-plugin-styled-components": "^5.20.0",
+    "axios": "1.3.3",
+    "gatsby": "^5.7.0",
+    "gatsby-plugin-google-analytics": "^5.7.0",
+    "gatsby-plugin-image": "^3.7.0",
+    "gatsby-plugin-manifest": "^5.7.0",
+    "gatsby-plugin-offline": "^6.7.0",
+    "gatsby-plugin-sharp": "^5.7.0",
+    "gatsby-plugin-styled-components": "^6.7.0",
     "gatsby-plugin-web-font-loader": "^1.0.4",
-    "gatsby-source-filesystem": "^4.20.0",
-    "gatsby-transformer-sharp": "^4.20.0",
-    "prop-types": "^15.8.1",
+    "gatsby-source-filesystem": "^5.7.0",
+    "gatsby-transformer-sharp": "^5.7.0",
     "react": "^18.2.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^18.2.0",
-    "react-feather": "^2.0.8",
-    "react-helmet": "^6.1.0",
+    "react-feather": "^2.0.10",
     "react-scrollspy": "^3.4.3",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.6"
   },
   "devDependencies": {
-    "prettier": "^2.7.1"
+    "@types/styled-components": "^5.1.26",
+    "prettier": "^2.8.4"
   },
   "resolutions": {
     "axios": "0.21.1"
