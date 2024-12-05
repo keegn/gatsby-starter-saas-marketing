@@ -1,6 +1,6 @@
 ## ☁️ A simple one page marketing site starter for SaaS companies and indie hackers.
 
-[Live Demo: https://gatsby-starter-saas-marketing.netlify.com/ ](https://gatsby-starter-saas-marketing.netlify.com/) - ⚠️ live demo deployement is no longer available on Netlify. 
+[Live Demo: https://gatsby-starter-saas-marketing.netlify.com/ ](https://gatsby-starter-saas-marketing.netlify.com/) - ⚠️ live demo deployment is no longer available on Netlify. 
 
 <img src="src/images/gatsby-starter-saas-marketing-full-page.png?raw=true" width="600" alt="Gatsby Starter Saas Marketing Full Screen Image"/>
 
